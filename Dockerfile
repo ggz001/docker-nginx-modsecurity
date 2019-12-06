@@ -1,10 +1,9 @@
-FROM alpine:3.9
+FROM alpine:3.10
+LABEL maintainer="ggz"
 
-LABEL maintainer="Elisiano Petrini <elisiano@gmail.com>"
+ENV NGINX_VERSION 1.17.6
 
-ENV NGINX_VERSION 1.15.9
-
-RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
+RUN GPG_KEYS=573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 \
 	&& CONFIG="\
 		--prefix=/etc/nginx \
 		--sbin-path=/usr/sbin/nginx \
